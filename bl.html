@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head lang="en">
@@ -8,11 +7,26 @@
 <body>
 <style>
 	.wrap-content {
-	    margin: 0 auto;
+		position:relative;
+	    margin: 15px auto;
 	    max-width: 640px;
 	    text-align: center;
-	    padding: 15px;
+		overflow: hidden;
+		width:100%;
 	}
+	.player-box.horizontal {
+		width:100%;
+		height:100%;
+	}
+    #overlay {
+		width: 100%;
+		height: 100%;
+        position: absolute;
+        z-index: 9999;
+        display: none;
+        cursor: pointer;
+		background-size: cover;
+    }
 </style>
     <input type="hidden" id="baseMovieUrl" value="">
     <input type="hidden" id="videoOrientation" value="horizontal">
@@ -117,15 +131,5 @@ window.IdmEngineCallback = function () {
     })();
     IdmLP.init();
 </script>
-<style>
-        #overlay {
-            width: 640px;
-            height: 360px;
-            position: absolute;
-            z-index: 9999;
-            display: none;
-            cursor: pointer;
-        }
-    </style>
 </body>
 </html>
