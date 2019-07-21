@@ -20,18 +20,13 @@
 		</div> 
 
 <script>
-	var imageUrl = "https://v.idomoo.com/2748/0000/2pltp9h13639b7wb11c52h62w13i61u45022818.jpg";
-        
-	       overlay.style.backgroundImage = "url("+imageUrl+")";
-
-
-	        function overlayFunction(){
-	            window.open("http://www.loans.org.il/%D7%94%D7%9C%D7%95%D7%95%D7%90%D7%95%D7%AA-%D7%91%D7%A0%D7%A7-%D7%91%D7%99%D7%A0%D7%9C%D7%90%D7%95%D7%9E%D7%99.aspx");
-	            overlay.style.display = "none";
-	        };
-	    var myEnvironment = 'idoplayer.idomoo.com/19/';
-
-	    
+    var   imageUrl = "https://v.idomoo.com/2748/0000/2pltp9h13639b7wb11c52h62w13i61u45022818.jpg";
+    overlay.style.backgroundImage = "url("+imageUrl+")";
+    function overlayFunction(){
+        window.open("http://www.loans.org.il/%D7%94%D7%9C%D7%95%D7%95%D7%90%D7%95%D7%AA-%D7%91%D7%A0%D7%A7-%D7%91%D7%99%D7%A0%D7%9C%D7%90%D7%95%D7%9E%D7%99.aspx");
+        overlay.style.display = "none";
+    };
+ 
 	var settings = {
 	    async: true,
 	    crossDomain: true,
@@ -53,7 +48,7 @@
 	            }],
 	            data: [{
 	                key: 'firstName',
-	                val: 'ג וזף'
+	                val: 'בורי בורי'
 	            }, {
 	                key: 'sex',
 	                val: 'male'
@@ -75,28 +70,13 @@
 	            }],
 	            storyboard_id: 18796,
 	            account_id: 2748,
-	            authentication_token: 'OXdQWzrwv2cLIQ9A2xfkJQ--'
+	            authentication_token: 'xB.akrOHH8Myanmg9rawLw--'
 	        }
 	    })
 	};
+	
 	$.ajax(settings).done(function(response) {
-		console.log("done");
-		window.IdmEngineCallback = function () {
-		    Idm.Engine.init({
-		        domain: myEnvironment,
-		        url : "",
-		        vertical: false,
-		        api: {
-		                    onComplete: function () {
-		                        overlay.style.display = "block";
-		                    }
-		                },
-		        "chapters": false,
-		        "timeline_events": false,
-		        "autostart": '0',
-		        uak : "pv5prod"
-		});
-		};
+		var myEnvironment = 'idoplayer.idomoo.com/19/';
 		(function (d, s, id) {
 		    var js, fjs = d.getElementsByTagName(s)[0];
 		    if (d.getElementById(id)) {
@@ -107,59 +87,79 @@
 		    js.src = '//' + myEnvironment + '/assets/js/eng.js';
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'idomooEngine'));
-		    (function(){
-		        IdmLP = {
-		            getQSParamNew : function(){
-		                var query_string = {};
-		                var query = window.location.search.substring(1);
-		                var vars = query.split("&");
-		                for (var i=0;i<vars.length;i++) {
-		                    var pair = vars[i].split("=");
-		                    // If first entry with this name
-		                    if (typeof query_string[pair[0]] === "undefined") {
-		                        query_string[pair[0]] = pair[1];
-		                        // If second entry with this name
-		                    } else if (typeof query_string[pair[0]] === "string") {
-		                        var arr = [ query_string[pair[0]], pair[1] ];
-		                        query_string[pair[0]] = arr;
-		                        // If third or later entry with this name
-		                    } else {
-		                        query_string[pair[0]].push(pair[1]);
-		                    }
-		                }
-		                return query_string;
-		            },
-		            init: function(){
-		                this.getMovieURL();
-		                this.setHDVideoBox();
-		            },
-		            getMovieURL: function(){
-		                var self = this;
-		                var baseMovieUrl = document.getElementById('baseMovieUrl').value;
-		                var movie_url = null;
-		                if (baseMovieUrl && baseMovieUrl !== ""){
-		                    var movie_hash = this.getQSParamNew().id;
-		                    movie_url = baseMovieUrl + movie_hash + ".mp4";
-		                }else{
-		                    movie_url = this.getQSParamNew().url;
-		                }
-		                this.movie_url = movie_url;
-		                if (!movie_url){
-		                    setTimeout(function(){
-		                        movie_url = Idm.Engine.getMovieURL();
-		                        self.movie_url = movie_url;
-		                    }, 800);
-		                }
-		            },
-		            setHDVideoBox:function(){
-		                var is_hd = this.getQSParamNew().hd;
-		                if (is_hd && is_hd ==1){
-		                    document.getElementById('wrap_content').style.maxWidth = '1280px';
-		                }
-		            }
-		        };
-		    })();
-		    IdmLP.init(); 
+		
+	    (function(){
+	        IdmLP = {
+	            getQSParamNew : function(){
+	                var query_string = {};
+	                var query = window.location.search.substring(1);
+	                var vars = query.split("&");
+	                for (var i=0;i<vars.length;i++) {
+	                    var pair = vars[i].split("=");
+	                    // If first entry with this name
+	                    if (typeof query_string[pair[0]] === "undefined") {
+	                        query_string[pair[0]] = pair[1];
+	                        // If second entry with this name
+	                    } else if (typeof query_string[pair[0]] === "string") {
+	                        var arr = [ query_string[pair[0]], pair[1] ];
+	                        query_string[pair[0]] = arr;
+	                        // If third or later entry with this name
+	                    } else {
+	                        query_string[pair[0]].push(pair[1]);
+	                    }
+	                }
+	                return query_string;
+	            },
+	            init: function(){
+	                this.getMovieURL();
+	                this.setHDVideoBox();
+	            },
+	            getMovieURL: function(){
+	                var self = this;
+	                var baseMovieUrl = document.getElementById('baseMovieUrl').value;
+	                var movie_url = null;
+	                //try to get the movie from hash id with baseURL or from url param
+	                if (baseMovieUrl && baseMovieUrl !== ""){
+	                    var movie_hash = this.getQSParamNew().id;
+	                    movie_url = baseMovieUrl + movie_hash + ".mp4";
+	                }else{
+	                    movie_url = this.getQSParamNew().url;
+	                }
+	                this.movie_url = movie_url;
+	                //if not found get the default for this page
+	                if (!movie_url){
+	                    setTimeout(function(){
+	                        movie_url = Idm.Engine.getMovieURL();
+	                        self.movie_url = movie_url;
+	                    }, 800);
+	                }
+	            },
+	            setHDVideoBox:function(){
+	                var is_hd = this.getQSParamNew().hd;
+	                if (is_hd && is_hd ==1){
+	                    document.getElementById('wrap_content').style.maxWidth = '1280px';
+	                }
+	            }
+	        };
+	    })();
+	    IdmLP.init();
+		
+		window.IdmEngineCallback = function () {
+    		Idm.Engine.init({
+        	domain: myEnvironment,
+        	url : response.video.output_formats[0].links[0].url,
+        	vertical: false,
+        	api: {
+                onComplete: function () {
+                     overlay.style.display = "block";
+            }
+            },
+        	"chapters": false,
+        	"timeline_events": false,
+        	"autostart": '0',
+        	uak : "pv5prod"
+		});
+	}
 	});
 </script>
 
