@@ -45,7 +45,15 @@
 	        video: {
 	            output_formats: [{
 	                format: 'VIDEO_HLS_V_X264_640X360_1600_A_AAC_128'
-	            }],
+	            },{
+                "marker": [
+                    {
+                        "index": 1,
+                        "time": "00:00:01"
+                    }
+                ],
+                "format": "IMAGE_JPEG_640X360"
+            }],
 	            data: [{
 	                key: 'firstName',
 	                val: 'בורי בורי'
