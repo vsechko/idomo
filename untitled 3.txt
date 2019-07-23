@@ -24,6 +24,7 @@ div#wrap_content p {
     font-size: 14px;
     color: #fff;
     margin: 0;
+    -webkit-text-size-adjust:none;
 }
 button.playerbutton {
     background: #fdb72b;
@@ -38,15 +39,15 @@ button.playerbutton {
     padding: 5px 15px;
     text-align: center;
 }
-#overlay { 
+#overlay {
 	width: 612px;
 	height: 344px;
-	position: absolute; 
-	z-index: 9999; 
-	display: none; 
-	cursor: pointer; 
-	background-size: cover; 
-} 
+	position: absolute;
+	z-index: 9999;
+	display: none;
+	cursor: pointer;
+	background-size: cover;
+}
 </style>
 <input type="hidden" id="baseMovieUrl" value="">
 	<input type="hidden" id="videoOrientation" value="horizontal">
@@ -58,4 +59,4 @@ button.playerbutton {
 			</div>
 			<button onclick="overlayFunction()" class="playerbutton">למימוש ההצעה</button>
 			<p>כפוף לתנאי הבנק. מתן הלוואה בהתאם לשיקול דעת הבנק ולמכסה יומית לכלל הלקוחות הנקבעת ע"י הבנק.<br> אי עמידה בפירעון ההלוואה עלול לגרור חיוב בריבית פיגורים והליכי הוצאה לפועל.</p>
-</div> 
+</div>
