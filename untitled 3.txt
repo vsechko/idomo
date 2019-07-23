@@ -1,3 +1,4 @@
+<style>
 .wrap-content {
     position: relative;
     margin: -56px -223px 0 0;
@@ -16,7 +17,8 @@ div#wrap_content h1 {
 	color: #fff;
 	margin: 0;
 	padding: 0 0 10px 0;
-	font-size: 23px;
+	font-size: 26px;
+	font-family: arial;
 }
 div#wrap_content p {
     font-size: 14px;
@@ -45,7 +47,7 @@ button.playerbutton {
 	cursor: pointer; 
 	background-size: cover; 
 } 
-
+</style>
 <input type="hidden" id="baseMovieUrl" value="">
 	<input type="hidden" id="videoOrientation" value="horizontal">
 		<div class="wrap-content" id="wrap_content">
@@ -55,5 +57,5 @@ button.playerbutton {
 				<div class="player idm-player horizontal playerMargin"></div>
 			</div>
 			<button onclick="overlayFunction()" class="playerbutton">למימוש ההצעה</button>
-			<p>כפוף לתנאי הבנק. מתן הלוואה בהתאם לשיקול דעת הבנק ולמכסה יומית לכלל הלקוחות הנקבעת ע"י הבנק.אי עמידה בפירעון ההלוואה עלול לגרור חיוב בריבית פיגורים והליכי הוצאה לפועל.</p>
+			<p>כפוף לתנאי הבנק. מתן הלוואה בהתאם לשיקול דעת הבנק ולמכסה יומית לכלל הלקוחות הנקבעת ע"י הבנק.<br> אי עמידה בפירעון ההלוואה עלול לגרור חיוב בריבית פיגורים והליכי הוצאה לפועל.</p>
 </div> 
